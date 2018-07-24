@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title>Home Security</title>
+	</head>
+	<body>
+		<h3>Home Security</h3>
+		<script src="http://192.168.1.4:3000/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io();
+			socket.on('stdout', function(msg) {
+				console.log(msg);
+			});
+		</script>
+	</body>
+</html>

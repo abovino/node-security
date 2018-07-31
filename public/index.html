@@ -6,11 +6,22 @@
 	</head>
 	<body>
 		<h3>Home Security</h3>
-		<script src="http://192.168.1.4:3000/socket.io/socket.io.js"></script>
+		<br>
+		<br>
+		<ul>
+			<li id="id"></li>
+			<li id="switch1"></li>
+			<li id="switch2"></li>
+			<li id="switch3"></li>
+			<li id="switch4"></li>
+			<li id="switch5"></li>
+		</ul>
+		<script src="http://192.168.1.8:3000/socket.io/socket.io.js"></script>
 		<script>
 			var socket = io();
-			socket.on('stdout', function(msg) {
-				console.log(msg);
+			socket.on('stdout', function(msg) {				
+				// switch3 = tamper switch (easiest for testing)
+				document.getElementById('switch3').textContent = msg.switch3
 			});
 		</script>
 	</body>
